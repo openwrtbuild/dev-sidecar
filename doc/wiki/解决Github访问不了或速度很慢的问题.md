@@ -1,4 +1,4 @@
-> 注：请使用 `v2.0.0-RC2` 及以上版本，下载地址：https://github.com/docmirror/dev-sidecar/releases
+> 注：请使用 `v2.0.0-RC2` 及以上版本，下载地址：https://github.com/openwrtbuild/dev-sidecar/releases
 
 目前，Github通过预设置的IP来访问的，选取测速排在前的IP。
 

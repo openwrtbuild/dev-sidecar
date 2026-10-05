@@ -1,6 +1,6 @@
 const fs = require('node:fs')
-const DevSidecar = require('@docmirror/dev-sidecar')
-const jsonApi = require('@docmirror/mitmproxy/src/json')
+const DevSidecar = require('@openwrtbuild/dev-sidecar')
+const jsonApi = require('@openwrtbuild/mitmproxy/src/json')
 
 // 启动服务
 const mitmproxyPath = './mitmproxy'

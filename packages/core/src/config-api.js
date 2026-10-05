@@ -1,5 +1,5 @@
 const fs = require('node:fs')
-const jsonApi = require('@docmirror/mitmproxy/src/json')
+const jsonApi = require('@openwrtbuild/mitmproxy/src/json')
 const lodash = require('lodash')
 const request = require('request')
 const defConfig = require('./config/index.js')

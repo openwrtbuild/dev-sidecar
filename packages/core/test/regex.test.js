@@ -7,7 +7,7 @@ describe('test', () => {
     const test = '^/[^/]+/[^/]+(?:/releases(?:/.*)?)?$'
     const reg = new RegExp(test)
 
-    const ret = reg.test('/docmirror/dev-sidecar/releases/tag')
+    const ret = reg.test('/openwrtbuild/dev-sidecar/releases/tag')
     console.log(ret)
     assert.strictEqual(ret, true)
 

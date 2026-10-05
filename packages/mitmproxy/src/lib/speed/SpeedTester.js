@@ -4,7 +4,7 @@ const _ = require('lodash')
 const log = require('../../utils/util.log.server')
 const config = require('./config.js')
 const matchUtil = require('../../utils/util.match.js')
-const { configFromFiles } = require('@docmirror/dev-sidecar/src/config/index.js')
+const { configFromFiles } = require('@openwrtbuild/dev-sidecar/src/config/index.js')
 
 const familyMapping = matchUtil.domainMapRegexply(configFromFiles.server.dns.familyMapping)
 

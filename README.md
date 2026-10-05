@@ -3,11 +3,11 @@
 开发者边车，命名取自service-mesh的service-sidecar，意为为开发者打辅助的边车工具（以下简称ds）
 通过本地代理的方式将https请求代理到一些国内的加速通道上
 
-<a href='https://github.com/docmirror/dev-sidecar'><img alt="GitHub stars" src="https://img.shields.io/github/stars/docmirror/dev-sidecar?logo=github&cacheSeconds=86400"></a>
+<a href='https://github.com/openwrtbuild/dev-sidecar'><img alt="GitHub stars" src="https://img.shields.io/github/stars/openwrtbuild/dev-sidecar?logo=github&cacheSeconds=86400"></a>
 
-[![Star History Chart](https://api.star-history.com/svg?repos=docmirror/dev-sidecar&type=date&legend=top-left)](https://www.star-history.com/#docmirror/dev-sidecar&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=openwrtbuild/dev-sidecar&type=date&legend=top-left)](https://www.star-history.com/#openwrtbuild/dev-sidecar&type=date&legend=top-left)
 
-> Gitee上的同步项目已被封禁，请认准本项目唯一官方仓库地址[https://github.com/docmirror/dev-sidecar](https://github.com/docmirror/dev-sidecar) 【狗头保命】
+> Gitee上的同步项目已被封禁，请认准本项目唯一官方仓库地址[https://github.com/openwrtbuild/dev-sidecar](https://github.com/openwrtbuild/dev-sidecar) 【狗头保命】
 >
 > 我将继续奋战在开源一线，为社区贡献更多更好的开源项目。
 >
@@ -25,7 +25,7 @@
 >
 > 注意：由于electron无法监听windows的关机事件，开着ds情况下直接重启电脑，会导致无法上网，你可以手动启动ds即可恢复网络，你也可以将ds设置为开机自启。
 >
-> 关于此问题的更多讨论请前往：[https://github.com/docmirror/dev-sidecar/issues/109](https://github.com/docmirror/dev-sidecar/issues/109)
+> 关于此问题的更多讨论请前往：[https://github.com/openwrtbuild/dev-sidecar/issues/109](https://github.com/openwrtbuild/dev-sidecar/issues/109)
 >
 > 注：此问题已在 `1.8.9` 版本中得到解决。
 
@@ -96,7 +96,7 @@
 #### 1）下载安装包
 
 - release下载
-  [Github Release](https://github.com/docmirror/dev-sidecar/releases)
+  [Github Release](https://github.com/openwrtbuild/dev-sidecar/releases)
 
 > Windows: 请选择DevSidecar-x.x.x-windows-universal.exe
 >
@@ -190,7 +190,7 @@
 
 没有配置域名的不会拦截，其他根据配置进行拦截处理。
 
-在【加速服务-拦截设置】中配置，格式如下：（更多内容参见[wiki](https://github.com/docmirror/dev-sidecar/wiki/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)）
+在【加速服务-拦截设置】中配置，格式如下：（更多内容参见[wiki](https://github.com/openwrtbuild/dev-sidecar/wiki/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)）
 
 ```json
 {
@@ -235,7 +235,7 @@
 
 某些域名解析出来的ip会无法访问，（比如api.github.com会被解析到新加坡的ip上，新加坡的服务器在上午挺好，到了晚上就卡死，基本不可用）
 
-通过从dns上获取ip列表，切换不同的ip进行尝试，最终会挑选到一个最快的ip（该功能需要事先配置好所用DNS），更多说明参见[wiki](https://github.com/docmirror/dev-sidecar/wiki/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
+通过从dns上获取ip列表，切换不同的ip进行尝试，最终会挑选到一个最快的ip（该功能需要事先配置好所用DNS），更多说明参见[wiki](https://github.com/openwrtbuild/dev-sidecar/wiki/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 
 ```json
 {
@@ -364,9 +364,9 @@ npm config delete https-proxy
 
 ### 6.9、其他问题
 
-请查阅[wiki](https://github.com/docmirror/dev-sidecar/wiki)
+请查阅[wiki](https://github.com/openwrtbuild/dev-sidecar/wiki)
 
-也可以查阅[有文档tag的issue](https://github.com/docmirror/dev-sidecar/issues?q=is%3Aissue%20label%3ADocumentation)，它们被开发者认证为相当于文档级别的参考issue。
+也可以查阅[有文档tag的issue](https://github.com/openwrtbuild/dev-sidecar/issues?q=is%3Aissue%20label%3ADocumentation)，它们被开发者认证为相当于文档级别的参考issue。
 
 ## 七、在其他程序使用
 
@@ -408,7 +408,7 @@ npm install -g pnpm --registry=https://registry.npmmirror.com
 
 ```shell
 # 拉取代码
-git clone https://github.com/docmirror/dev-sidecar
+git clone https://github.com/openwrtbuild/dev-sidecar
 
 cd dev-sidecar
 

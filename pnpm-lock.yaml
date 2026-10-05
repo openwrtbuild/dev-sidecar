@@ -32,10 +32,10 @@ importers:
 
   packages/cli:
     dependencies:
-      '@docmirror/dev-sidecar':
+      '@openwrtbuild/dev-sidecar':
         specifier: workspace:*
         version: link:../core
-      '@docmirror/mitmproxy':
+      '@openwrtbuild/mitmproxy':
         specifier: workspace:*
         version: link:../mitmproxy
 
@@ -81,10 +81,10 @@ importers:
 
   packages/gui:
     dependencies:
-      '@docmirror/dev-sidecar':
+      '@openwrtbuild/dev-sidecar':
         specifier: workspace:*
         version: link:../core
-      '@docmirror/mitmproxy':
+      '@openwrtbuild/mitmproxy':
         specifier: workspace:*
         version: link:../mitmproxy
       '@starknt/shutdown-handler-napi':
@@ -193,7 +193,7 @@ importers:
 
   packages/mitmproxy:
     dependencies:
-      '@docmirror/dev-sidecar':
+      '@openwrtbuild/dev-sidecar':
         specifier: workspace:*
         version: link:../core
       agentkeepalive:

@@ -67,7 +67,7 @@ npm start
 ## 相关项目
 
 本项目受到来自 [wallpunch/wizard](https://github.com/wallpunch/wizard) 的启发；
-用作 [docmirror/dev-sidecar](https://github.com/docmirror/dev-sidecar) 中的网络检测插件。
+用作 [openwrtbuild/dev-sidecar](https://github.com/openwrtbuild/dev-sidecar) 中的网络检测插件。
 
 ---
 

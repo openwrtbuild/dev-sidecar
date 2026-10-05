@@ -55,7 +55,7 @@ export default {
     _githubStarBadgeUrl () {
       // 生成每天更新一次的缓存键，减少API调用频率
       const today = new Date().toISOString().split('T')[0] // YYYY-MM-DD
-      return `https://img.shields.io/github/stars/docmirror/dev-sidecar?logo=github&cacheSeconds=86400&t=${today}`
+      return `https://img.shields.io/github/stars/openwrtbuild/dev-sidecar?logo=github&cacheSeconds=86400&t=${today}`
     },
   },
   async created () {
@@ -389,7 +389,7 @@ export default {
             如果它解决了你的问题，请不要吝啬你的star哟！点这里
             <ArrowRightOutlined style="margin-right:10px;" />
           </div>
-          <a @click="openExternal('https://github.com/docmirror/dev-sidecar')"><img
+          <a @click="openExternal('https://github.com/openwrtbuild/dev-sidecar')"><img
             alt="GitHub stars"
             :src="_githubStarBadgeUrl"
           ></a>

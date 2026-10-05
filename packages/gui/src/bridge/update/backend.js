@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import DevSidecar from '@docmirror/dev-sidecar'
+import DevSidecar from '@openwrtbuild/dev-sidecar'
 import AdmZip from 'adm-zip'
 import { ipcMain } from 'electron'
 import electronUpdater from 'electron-updater'
@@ -13,7 +13,7 @@ const require = createRequire(import.meta.url)
 const pkg = require('../../../package.json')
 import appPathUtil from '../../utils/util.apppath.js'
 import log from '../../utils/util.log.gui.js'
-import { isNewVersion } from '@docmirror/dev-sidecar/src/utils/util.version.js'
+import { isNewVersion } from '@openwrtbuild/dev-sidecar/src/utils/util.version.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const isMac = process.platform === 'darwin'
@@ -96,7 +96,7 @@ function updateHandle (app, api, win, beforeQuit, quit, log) {
   let partPackagePath = null
 
   // 检查更新
-  const releasesApiUrl = 'https://api.github.com/repos/docmirror/dev-sidecar/releases'
+  const releasesApiUrl = 'https://api.github.com/repos/openwrtbuild/dev-sidecar/releases'
   async function checkForUpdatesFromGitHub () {
     request(releasesApiUrl, { headers: { 'User-Agent': `DS/${curVersion}`, 'Server-Name': 'baidu.com' } }, (error, response, body) => {
       try {

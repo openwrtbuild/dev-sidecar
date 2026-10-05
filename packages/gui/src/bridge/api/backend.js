@@ -1,17 +1,17 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import DevSidecar from '@docmirror/dev-sidecar'
+import DevSidecar from '@openwrtbuild/dev-sidecar'
 import { app, ipcMain, shell } from 'electron'
 import lodash from 'lodash'
-import jsonApi from '@docmirror/mitmproxy/src/json.js'
+import jsonApi from '@openwrtbuild/mitmproxy/src/json.js'
 import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
 const pk = require('../../../package.json')
-import coreDefaultConfig from '@docmirror/dev-sidecar/src/config/index.js'
-import configLoader from '@docmirror/dev-sidecar/src/config/local-config-loader.js'
+import coreDefaultConfig from '@openwrtbuild/dev-sidecar/src/config/index.js'
+import configLoader from '@openwrtbuild/dev-sidecar/src/config/local-config-loader.js'
 import log from '../../utils/util.log.gui.js'
-import dateUtil from '@docmirror/dev-sidecar/src/utils/util.date.js'
+import dateUtil from '@openwrtbuild/dev-sidecar/src/utils/util.date.js'
 
 const { configFromFiles } = coreDefaultConfig
 

@@ -1,5 +1,5 @@
 {
-  "name": "@docmirror/mitmproxy",
+  "name": "@openwrtbuild/mitmproxy",
   "version": "2.2.0",
   "private": false,
   "description": "",
@@ -13,7 +13,7 @@
     "test": "mocha --exit"
   },
   "dependencies": {
-    "@docmirror/dev-sidecar": "workspace:*",
+    "@openwrtbuild/dev-sidecar": "workspace:*",
     "agentkeepalive": "^4.6.0",
     "axios": "^1.18.1",
     "baidu-aip-sdk": "^4.16.16",

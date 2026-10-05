@@ -1,4 +1,4 @@
-const jsonApi = require('@docmirror/mitmproxy/src/json')
+const jsonApi = require('@openwrtbuild/mitmproxy/src/json')
 const nodeConfig = require('./config')
 
 const NodePlugin = function (context) {

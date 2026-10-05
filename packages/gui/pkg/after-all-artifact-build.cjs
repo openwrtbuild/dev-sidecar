@@ -48,7 +48,7 @@ function writePartPackages (context) {
 
     // Write one partPackage line per arch
     const lines = urls.map(url => `partPackage: ${url}`).join('\n')
-    const appendContent = `${lines}\npartMiniVersion: 1.7.0\nreleaseNotes:\n  - 升级日志\n  - https://download.fastgit.org/docmirror/dev-sidecar/releases/download/v${version}/DevSidecar-${version}.exe\n`
+    const appendContent = `${lines}\npartMiniVersion: 1.7.0\nreleaseNotes:\n  - 升级日志\n  - https://download.fastgit.org/openwrtbuild/dev-sidecar/releases/download/v${version}/DevSidecar-${version}.exe\n`
 
     fs.appendFile(latestFilePath, appendContent, (err) => {
       if (err) {

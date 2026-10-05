@@ -1,8 +1,8 @@
-const HttpsAgent = require('@docmirror/mitmproxy/src/lib/proxy/common/ProxyHttpsAgent')
+const HttpsAgent = require('@openwrtbuild/mitmproxy/src/lib/proxy/common/ProxyHttpsAgent')
 const request = require('request')
 
 const options = {
-  url: 'https://raw.githubusercontent.com/docmirror/dev-sidecar/refs/heads/master/packages/core/src/config/remote_config.json5',
+  url: 'https://raw.githubusercontent.com/openwrtbuild/dev-sidecar/refs/heads/master/packages/core/src/config/remote_config.json5',
   // url: 'https://raw.giteeusercontent.com/wangliang181230/dev-sidecar-config/raw/main/remote_config.json',
   servername: 'baidu.com',
   agent: new HttpsAgent({

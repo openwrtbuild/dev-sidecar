@@ -38,7 +38,7 @@ jobs:
         id: sha256_x86_64
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          URL="https://github.com/docmirror/dev-sidecar/releases/download/v${VERSION}/DevSidecar-${VERSION}-linux-x86_64.tar.gz"
+          URL="https://github.com/openwrtbuild/dev-sidecar/releases/download/v${VERSION}/DevSidecar-${VERSION}-linux-x86_64.tar.gz"
           echo "Downloading: ${URL}"
           curl -fsSL -o /tmp/dev-sidecar-x86_64.tar.gz "${URL}"
           SHA256=$(sha256sum /tmp/dev-sidecar-x86_64.tar.gz | awk '{print $1}')
@@ -49,7 +49,7 @@ jobs:
         id: sha256_aarch64
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          URL="https://github.com/docmirror/dev-sidecar/releases/download/v${VERSION}/DevSidecar-${VERSION}-linux-arm64.tar.gz"
+          URL="https://github.com/openwrtbuild/dev-sidecar/releases/download/v${VERSION}/DevSidecar-${VERSION}-linux-arm64.tar.gz"
           echo "Downloading: ${URL}"
           curl -fsSL -o /tmp/dev-sidecar-aarch64.tar.gz "${URL}"
           SHA256=$(sha256sum /tmp/dev-sidecar-aarch64.tar.gz | awk '{print $1}')

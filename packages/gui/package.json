@@ -1,5 +1,5 @@
 {
-  "name": "@docmirror/dev-sidecar-gui",
+  "name": "@openwrtbuild/dev-sidecar-gui",
   "version": "2.2.0",
   "private": false,
   "type": "module",
@@ -10,7 +10,7 @@
   },
   "description": "开发者边车辅助工具 — 加速 GitHub/NPM/Docker Hub 等站点的本地 MITM 代理",
   "license": "MPL-2.0",
-  "homepage": "https://github.com/docmirror/dev-sidecar",
+  "homepage": "https://github.com/openwrtbuild/dev-sidecar",
   "scripts": {
     "serve": "pnpm exec vue-cli-service serve",
     "build": "pnpm exec vue-cli-service build",
@@ -24,8 +24,8 @@
     "electron:icons-black": "pnpm exec electron-icon-builder --input=./public/logo/win-black.png --output=build/black --flatten"
   },
   "dependencies": {
-    "@docmirror/dev-sidecar": "workspace:*",
-    "@docmirror/mitmproxy": "workspace:*",
+    "@openwrtbuild/dev-sidecar": "workspace:*",
+    "@openwrtbuild/mitmproxy": "workspace:*",
     "@starknt/shutdown-handler-napi": "^0.0.3",
     "@starknt/sysproxy": "^0.0.3",
     "@vscode/sudo-prompt": "^9.3.2",

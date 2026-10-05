@@ -6,13 +6,13 @@
 
 # 一、下载安装：
 
-访问 https://github.com/docmirror/dev-sidecar/releases 页面，下载对应操作系统的安装程序进行安装。
+访问 https://github.com/openwrtbuild/dev-sidecar/releases 页面，下载对应操作系统的安装程序进行安装。
 
-如安装有问题，请查看 [各平台安装说明](https://github.com/docmirror/dev-sidecar/wiki/%E5%90%84%E5%B9%B3%E5%8F%B0%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E)
+如安装有问题，请查看 [各平台安装说明](https://github.com/openwrtbuild/dev-sidecar/wiki/%E5%90%84%E5%B9%B3%E5%8F%B0%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E)
 
 # 二、功能使用说明：
 
-1. [`加速服务`使用说明](https://github.com/docmirror/dev-sidecar/wiki/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
+1. [`加速服务`使用说明](https://github.com/openwrtbuild/dev-sidecar/wiki/%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 2. 系统代理使用说明：
 3. 通用功能使用说明：
     1. 开机自启动：
@@ -30,14 +30,14 @@
 
 # 三、解决问题：
 
-1. [解决Github访问不了或速度很慢的问题](https://github.com/docmirror/dev-sidecar/wiki/%E8%A7%A3%E5%86%B3Github%E8%AE%BF%E9%97%AE%E4%B8%8D%E4%BA%86%E6%88%96%E9%80%9F%E5%BA%A6%E5%BE%88%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98)
-2. [Linux安装证书失败的避坑](https://github.com/docmirror/dev-sidecar/issues/238)
-3. [解决Linux（deb）系统下无法安装根证书的问题](https://github.com/docmirror/dev-sidecar/issues/135)
-4. [在Arch/Fedora下的证书安装](https://github.com/docmirror/dev-sidecar/issues/204)
-5. [Mac安装：`无法打开“dev-sidecar”，因为无法验证开发者。` 的解决方案](https://github.com/docmirror/dev-sidecar/issues/147)
-6. [在 WSL 中的使用方法](https://github.com/docmirror/dev-sidecar/issues/73)
+1. [解决Github访问不了或速度很慢的问题](https://github.com/openwrtbuild/dev-sidecar/wiki/%E8%A7%A3%E5%86%B3Github%E8%AE%BF%E9%97%AE%E4%B8%8D%E4%BA%86%E6%88%96%E9%80%9F%E5%BA%A6%E5%BE%88%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98)
+2. [Linux安装证书失败的避坑](https://github.com/openwrtbuild/dev-sidecar/issues/238)
+3. [解决Linux（deb）系统下无法安装根证书的问题](https://github.com/openwrtbuild/dev-sidecar/issues/135)
+4. [在Arch/Fedora下的证书安装](https://github.com/openwrtbuild/dev-sidecar/issues/204)
+5. [Mac安装：`无法打开“dev-sidecar”，因为无法验证开发者。` 的解决方案](https://github.com/openwrtbuild/dev-sidecar/issues/147)
+6. [在 WSL 中的使用方法](https://github.com/openwrtbuild/dev-sidecar/issues/73)
 
-[> 点击前往Issue区查找更多帮助信息](https://github.com/docmirror/dev-sidecar/issues)
+[> 点击前往Issue区查找更多帮助信息](https://github.com/openwrtbuild/dev-sidecar/issues)
 
 # 四、DevSidecar技术交流群
 
@@ -49,4 +49,4 @@
 
 # 五、版本更新日志
 
-https://github.com/docmirror/dev-sidecar/releases
+https://github.com/openwrtbuild/dev-sidecar/releases

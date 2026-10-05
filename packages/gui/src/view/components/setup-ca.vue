@@ -80,7 +80,7 @@ export default defineComponent({
       <a-button type="primary" style="float:right" @click="doSetup()">
         点此去安装
       </a-button>
-      <a-button style="float:right;margin-right:10px;" @click="openExternal('https://github.com/docmirror/dev-sidecar/blob/master/doc/caroot.md')">
+      <a-button style="float:right;margin-right:10px;" @click="openExternal('https://github.com/openwrtbuild/dev-sidecar/blob/master/doc/caroot.md')">
         为什么要安装证书？
       </a-button>
     </template>

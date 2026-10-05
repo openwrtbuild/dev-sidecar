@@ -1,5 +1,5 @@
 {
-  "name": "@docmirror/dev-sidecar",
+  "name": "@openwrtbuild/dev-sidecar",
   "version": "2.2.0",
   "private": false,
   "description": "给开发者的加速代理工具",

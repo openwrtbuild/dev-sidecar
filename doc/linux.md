@@ -36,7 +36,7 @@
     ```
     echo -e '#!/bin/sh\ndistrobox-host-exec gsettings "$@"' >/usr/bin/gsettings
     ```
-- 使用命令启动应用，使用“自动安装证书”功能，回到终端，找到输出里含有 `sudo` 的两句命令，复制到主系统执行，如失败（或使用其他证书系统），请自行安装证书，可参考 [议题 #204](https://github.com/docmirror/dev-sidecar/issues/204)
+- 使用命令启动应用，使用“自动安装证书”功能，回到终端，找到输出里含有 `sudo` 的两句命令，复制到主系统执行，如失败（或使用其他证书系统），请自行安装证书，可参考 [议题 #204](https://github.com/openwrtbuild/dev-sidecar/issues/204)
 
 ### 1.4. 版本选择
 

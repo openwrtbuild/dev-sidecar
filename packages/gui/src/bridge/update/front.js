@@ -69,7 +69,7 @@ function install (app, api) {
   }
 
   function openGithubUrl () {
-    api.ipc.openExternal('https://github.com/docmirror/dev-sidecar/releases')
+    api.ipc.openExternal('https://github.com/openwrtbuild/dev-sidecar/releases')
   }
 
   function goManualUpdate () {
@@ -134,7 +134,7 @@ function install (app, api) {
           children.push(
             h('div', {}, [
               h('span', {}, '发布公告：'),
-              h('a', { onClick: openGithubUrl }, 'https://github.com/docmirror/dev-sidecar/releases'),
+              h('a', { onClick: openGithubUrl }, 'https://github.com/openwrtbuild/dev-sidecar/releases'),
             ]),
             h('hr'),
             h('pre', { style: { maxHeight: '350px', fontFamily: 'auto' } }, releaseNotes),
@@ -186,7 +186,7 @@ function install (app, api) {
               <div>
                 <div>
                   发布公告：
-                  <a onClick={openGithubUrl}>https://github.com/docmirror/dev-sidecar/releases</a>
+                  <a onClick={openGithubUrl}>https://github.com/openwrtbuild/dev-sidecar/releases</a>
                 </div>
                 <hr />
                 <pre style="max-height:350px;font-family:auto">
@@ -202,7 +202,7 @@ function install (app, api) {
               <div>
                 <div>
                   发布公告：
-                  <a onClick={openGithubUrl}>https://github.com/docmirror/dev-sidecar/releases</a>
+                  <a onClick={openGithubUrl}>https://github.com/openwrtbuild/dev-sidecar/releases</a>
                 </div>
                 <div>更新内容：</div>
                 <ol>{notes}</ol>

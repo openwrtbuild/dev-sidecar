@@ -1,5 +1,5 @@
 {
-  "name": "@docmirror/dev-sidecar-cli",
+  "name": "@openwrtbuild/dev-sidecar-cli",
   "version": "2.2.0",
   "private": false,
   "description": "给开发者的加速代理工具",
@@ -17,7 +17,7 @@
     "start": "node ./src"
   },
   "dependencies": {
-    "@docmirror/dev-sidecar": "workspace:*",
-    "@docmirror/mitmproxy": "workspace:*"
+    "@openwrtbuild/dev-sidecar": "workspace:*",
+    "@openwrtbuild/mitmproxy": "workspace:*"
   }
 }

@@ -13,11 +13,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm lint:fix` — auto-fix lint issues
 
 ### Testing
-- `pnpm --filter @docmirror/dev-sidecar test` — run core package tests (Mocha + Chai)
-- `pnpm --filter @docmirror/mitmproxy test` — run proxy package tests
+- `pnpm --filter @openwrtbuild/dev-sidecar test` — run core package tests (Mocha + Chai)
+- `pnpm --filter @openwrtbuild/mitmproxy test` — run proxy package tests
 - Run a single test file:
-  - `pnpm --filter @docmirror/dev-sidecar test -- test/regex.test.js`
-  - `pnpm --filter @docmirror/mitmproxy test -- test/proxyTest.js`
+  - `pnpm --filter @openwrtbuild/dev-sidecar test -- test/regex.test.js`
+  - `pnpm --filter @openwrtbuild/mitmproxy test -- test/proxyTest.js`
 
 ### GUI Development (from `packages/gui/`)
 - `npm run electron` — launch the Electron app in dev mode (starts Vue dev server + Electron)
@@ -46,14 +46,14 @@ cli ──────────────────┴──────�
 
 ### Packages
 
-**`packages/core`** (`@docmirror/dev-sidecar`) — The orchestrator.
+**`packages/core`** (`@openwrtbuild/dev-sidecar`) — The orchestrator.
 - Entry: `src/index.js` → `src/expose.js`. Exports `startup()`, `shutdown()`, plus `config`, `event`, `shell`, `server`, `proxy`, `plugin`, `status`.
 - Startup sequence: merge config → fork mitmproxy child process → set OS-level system proxy → start plugins (git, node, pip, overwall).
 - Config merges 4 layers: defaults (`src/config/index.js`, ~470 lines) → remote shared → remote personal → user overrides (`~/.dev-sidecar/config.json`).
 - Shell helpers (`src/shell/`) abstract OS commands: setting system proxy, installing CA certs, enabling loopback, killing processes by port.
 - Plugins (`src/modules/plugin/`) follow a uniform `{ key, config, status, plugin: Factory(context) }` pattern.
 
-**`packages/mitmproxy`** (`@docmirror/mitmproxy`) — The proxy engine (runs as a child process).
+**`packages/mitmproxy`** (`@openwrtbuild/mitmproxy`) — The proxy engine (runs as a child process).
 - Entry: `src/index.js`. Creates HTTP and HTTPS proxy servers on consecutive ports (default: 31180 HTTP, 31181 HTTPS).
 - Interceptor pipeline (`src/lib/interceptor/`): priority-ordered interceptors match domains+paths and apply actions (redirect, proxy, abort, cache, SNI rewrite, OPTIONS preflight, response replace, script injection).
 - TLS/cert handling (`src/lib/proxy/tls/`): generates a local CA root cert (`~/.dev-sidecar/dev-sidecar.ca.crt`), then creates per-domain fake certs signed by it using `node-forge`. Fake servers are LRU-cached.
@@ -61,19 +61,19 @@ cli ──────────────────┴──────�
 - Speed test (`src/lib/speed/`): measures latency/availability to domains, used for IP selection.
 - `RequestCounter` (`src/lib/choice/`): dynamic backup failover — tracks success/failure per backend, switches after 3 consecutive errors or <40% success rate.
 
-**`packages/gui`** (`@docmirror/dev-sidecar-gui`) — Electron + Vue 3 desktop app.
+**`packages/gui`** (`@openwrtbuild/dev-sidecar-gui`) — Electron + Vue 3 desktop app.
 - Main process: `src/background.js` — creates BrowserWindow, system tray, IPC bridges, single-instance lock, Windows shutdown hook.
 - Renderer: Vue 3 with Vue Router (hash mode), Ant Design Vue 4, dark theme support.
 - IPC bridge (`src/bridge/`): dynamic RPC — main process exposes a flat API list, renderer calls methods via `ipcRenderer.invoke('apiInvoke', [path, args])`. Core events (status, error, speed) flow main→renderer via `webContents.send`.
 - Pages: dashboard (index), accelerator server, system proxy, settings, help, plus per-plugin pages (free-eye, git, node, overwall, pip).
 
-**`packages/cli`** (`@docmirror/dev-sidecar-cli`) — Headless CLI launcher. Reads user config, calls `DevSidecar.api.startup()`.
+**`packages/cli`** (`@openwrtbuild/dev-sidecar-cli`) — Headless CLI launcher. Reads user config, calls `DevSidecar.api.startup()`.
 
 **`packages/aur/`** — Arch Linux PKGBUILD (not a JS package). **`packages/cli2/`** — abandoned placeholder, ignore it.
 
 ### Key conventions
 - **Module systems**: `core`, `mitmproxy`, and `cli` use implicit CommonJS (`.js` files, no `"type": "module"`). `gui` uses ESM (`"type": "module"`). The root `package.json` declares `"type": "module"` but this only affects root-level scripts.
-- **Shared JSON5 parser**: `@docmirror/mitmproxy/src/json` is used across all packages for JSON5 config parsing.
+- **Shared JSON5 parser**: `@openwrtbuild/mitmproxy/src/json` is used across all packages for JSON5 config parsing.
 - **Logging**: log4js-based; log files at `~/.dev-sidecar/logs/core.log`, `gui.log`, `server.log`. Logger factory at `packages/core/src/utils/util.logger.js`.
 - **Status/event bus**: `core/src/event.js` (EventEmitter) and `core/src/status.js` (central status tree updated via events).
 - **CA certificate**: stored at `~/.dev-sidecar/dev-sidecar.ca.crt` and `~/.dev-sidecar/dev-sidecar.ca.key.pem`. Generated locally on first run.

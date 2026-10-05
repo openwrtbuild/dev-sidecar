@@ -59,7 +59,7 @@ utils.createCA = function (CN) {
     value: 'dev-sidecar',
   }, {
     shortName: 'OU',
-    value: 'https://github.com/docmirror/dev-sidecar',
+    value: 'https://github.com/openwrtbuild/dev-sidecar',
   }]
   cert.setSubject(attrs)
   cert.setIssuer(attrs)
@@ -125,7 +125,7 @@ utils.createFakeCertificateByDomain = async function (caKey, caCert, domain, map
     value: 'dev-sidecar',
   }, {
     shortName: 'OU',
-    value: 'https://github.com/docmirror/dev-sidecar',
+    value: 'https://github.com/openwrtbuild/dev-sidecar',
   }]
 
   cert.setIssuer(caCert.subject.attributes)

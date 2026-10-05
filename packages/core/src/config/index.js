@@ -457,7 +457,7 @@ const defaultConfig = {
     dataList: [
       {
         title: '查看DevSidecar的说明文档（Wiki）',
-        url: 'https://github.com/docmirror/dev-sidecar/wiki',
+        url: 'https://github.com/openwrtbuild/dev-sidecar/wiki',
       },
       {
         title: '为了展示更多帮助信息，请启用 “远程配置” 功能！！！',

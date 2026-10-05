@@ -4,15 +4,15 @@ pkgver=2.0.2
 pkgrel=1
 pkgdesc="给开发者的边车辅助工具，通过代理的方式来改善国内访问github等境外网站的情况"
 arch=('x86_64' 'aarch64')
-url="https://github.com/docmirror/dev-sidecar"
+url="https://github.com/openwrtbuild/dev-sidecar"
 license=('MPL-2.0')
 depends=('libnotify' 'libappindicator-gtk3' 'libxtst' 'nss' 'libxss' 'gtk3')
 provides=('dev-sidecar')
 conflicts=('dev-sidecar')
 options=('!strip')
 
-source_x86_64=("https://github.com/docmirror/dev-sidecar/releases/download/v${pkgver}/DevSidecar-${pkgver}-linux-x86_64.tar.gz")
-source_aarch64=("https://github.com/docmirror/dev-sidecar/releases/download/v${pkgver}/DevSidecar-${pkgver}-linux-arm64.tar.gz")
+source_x86_64=("https://github.com/openwrtbuild/dev-sidecar/releases/download/v${pkgver}/DevSidecar-${pkgver}-linux-x86_64.tar.gz")
+source_aarch64=("https://github.com/openwrtbuild/dev-sidecar/releases/download/v${pkgver}/DevSidecar-${pkgver}-linux-arm64.tar.gz")
 
 sha256sums_x86_64=('SKIP')
 sha256sums_aarch64=('SKIP')
